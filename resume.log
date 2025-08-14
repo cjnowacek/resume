@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.30)  14 AUG 2025 15:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.7.30)  14 AUG 2025 19:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -544,9 +544,9 @@ nput line 48.
 \cvitemwithcommentskilllength=\skip96
 \cvitemwithcommentcommentlength=\skip97
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcolorblue.sty
-Package: moderncvcolorblue 2022-02-21 v2.3.1 modern curriculum vitae and letter
- color scheme: blue
+(/usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvcolororange.sty
+Package: moderncvcolororange 2022-02-21 v2.3.1 modern curriculum vitae and lett
+er color scheme: orange
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
@@ -781,7 +781,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 Package hyperref Info: Option `breaklinks' set `true' on input line 27.
 Package hyperref Info: Option `bookmarksopen' set `true' on input line 27.
 
-No file resume.aux.
+(./resume.aux)
 \openout1 = `resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
@@ -802,6 +802,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
+
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count326
@@ -880,10 +881,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring OFF on input line 27.
+(./resume.out) (./resume.out)
 \@outlinefile=\write4
 \openout4 = `resume.out'.
 
 \makecvheaddetailsbox=\box116
+
 (/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -927,16 +930,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--29
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 32.
 
-Overfull \hbox (288.81532pt too wide) in paragraph at lines 86--86
-[][] 
- []
-
-
-Overfull \hbox (288.81532pt too wide) in paragraph at lines 87--87
-[][] 
- []
-
-
 Overfull \hbox (288.81532pt too wide) in paragraph at lines 88--88
 [][] 
  []
@@ -946,12 +939,22 @@ Overfull \hbox (288.81532pt too wide) in paragraph at lines 89--89
 [][] 
  []
 
+
+Overfull \hbox (288.81532pt too wide) in paragraph at lines 90--90
+[][] 
+ []
+
+
+Overfull \hbox (288.81532pt too wide) in paragraph at lines 91--91
+[][] 
+ []
+
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 94.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 96.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 94.
+(Font)              <8> on input line 96.
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 94.
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 96.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-di
@@ -968,23 +971,14 @@ L3 programming layer <2024-01-22>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 9.12pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `resume.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `resume.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D0952BBA15BF2ACA8BDA8F897C4F1A19;831.
+Package rerunfilecheck Info: File `resume.out' has not changed.
+(rerunfilecheck)             Checksum: D0952BBA15BF2ACA8BDA8F897C4F1A19;831.
  ) 
 Here is how much of TeX's memory you used:
- 26252 strings out of 474222
- 501970 string characters out of 5748733
- 1970975 words of memory out of 5000000
- 48009 multiletter control sequences out of 15000+600000
+ 26267 strings out of 474222
+ 502192 string characters out of 5748733
+ 1969975 words of memory out of 5000000
+ 48018 multiletter control sequences out of 15000+600000
  569958 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  129i,13n,129p,1003b,510s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1000,10 +994,10 @@ mssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb>
-Output written on resume.pdf (1 page, 167324 bytes).
+Output written on resume.pdf (1 page, 167458 bytes).
 PDF statistics:
- 98 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  8 named destinations out of 1000 (max. 500000)
- 40973 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 41021 words of extra memory for PDF output out of 42996 (max. 10000000)
 
