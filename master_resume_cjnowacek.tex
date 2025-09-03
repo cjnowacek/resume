@@ -1,0 +1,190 @@
+% master_resume_cjnowacek.tex
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% ---------------------------
+% TOGGLES (flip these)
+% ---------------------------
+\newif\ifIT
+\newif\ifTechArt
+% Choose ONE profile:
+\ITtrue        % <- IT/DevOps profile ON
+\TechArtfalse  % <- Tech Art profile OFF
+% For Tech Art build, swap to:
+% \ITfalse
+% \TechArttrue
+%
+% Make file overrise
+%% Optional override (auto-written by Makefile)
+\IfFileExists{profile_toggle.tex}{\input{profile_toggle.tex}}{}
+
+% ---------------------------
+% THEME & LAYOUT
+% ---------------------------
+\moderncvstyle{classic}
+\ifIT
+  \moderncvcolor{orange}
+\fi
+\ifTechArt
+  \moderncvcolor{blue}
+\fi
+
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.95]{geometry}
+\usepackage{enumitem}
+\setlength{\hintscolumnwidth}{2.8cm}
+\setlength{\separatorcolumnwidth}{0.02\textwidth}
+\setlength{\parskip}{0pt}
+
+
+% ---------------------------
+% PERSONAL INFO
+% ---------------------------
+\name{CJ}{Nowacek}
+\ifIT
+  \title{IT Support \& Technical Problem Solver — DevOps in Progress}
+\fi
+\ifTechArt
+  \title{Technical Artist \& Pipeline Developer}
+\fi
+\address{Cleveland Heights, Ohio}{}{}
+\phone[mobile]{(216) 469 0959}
+\email{cj.nowacek@gmail.com}
+\homepage{cjnowacek.com}
+\social[github]{cjnowacek}
+
+\begin{document}
+\makecvtitle
+
+% ---------------------------
+% PROFESSIONAL SUMMARY
+% ---------------------------
+\section{Professional Summary}
+\ifIT
+\cvitem{}{IT support specialist transitioning toward DevOps engineering, with a background in workflow automation, Linux and Windows administration, and CI/CD pipelines. Skilled at diagnosing and resolving technical issues, scripting in Python/Bash, and documenting solutions for end users. Experienced in cross-team collaboration, ticketing (Jira), and process improvements that reduce errors and save time.}
+\fi
+\ifTechArt
+\cvitem{}{Technical Artist specializing in workflow optimization, asset pipelines, and automation for AAA development. Proven efficiency gains through Python, MaxScript, and Maya API tooling; strong collaboration across Animation, Design, and Engineering; and a consistent focus on reliability, usability, and scale.}
+\fi
+
+% ---------------------------
+% CORE / TECHNICAL SKILLS
+% ---------------------------
+\section{Core Skills}
+\ifIT
+\cvitem{Infrastructure}{Linux, Windows, macOS; user/device management; permissions; basic shell administration}
+\cvitem{Networking}{Basic TCP/IP, VPN setup, file sharing, system permissions}
+\cvitem{Automation}{Python, Bash; batch processing; error-reduction scripts}
+\cvitem{CI/CD}{Jenkins (job config, validation, multi-platform builds)}
+\cvitem{Tools}{Git, Perforce, Jira, Confluence, remote assistance}
+\cvitem{Support}{Troubleshooting H/W \& S/W, clear documentation, empathetic communication}
+\fi
+
+\ifTechArt
+\cvitem{Programming}{Python (Maya API, PyQt), MaxScript, MEL, Bash, Git, Perforce, Jenkins}
+\cvitem{DCC/Engines}{Maya, 3ds Max, Unreal Engine 5, Unity, Substance Painter}
+\cvitem{Focus}{Character rigging, pipeline development, batch tooling, workflow automation}
+\fi
+
+% ---------------------------
+% PROFESSIONAL EXPERIENCE
+% ---------------------------
+\section{Professional Experience}
+
+% Anuttacon via GoDemic (Contract)
+\cventry{Mar--Apr 2025}{Technical Artist (Contract)}{Anuttacon via GoDemic}{Remote}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \ifIT
+    \item Supported production teams by diagnosing and resolving technical issues across digital workflows
+    \item Created automation scripts (Python/Bash) to reduce repetitive tasks and improve processing speed
+    \item Incorporated user feedback to improve tool usability and reliability; wrote clear usage docs
+    \item Configured Jenkins jobs for validation/build steps, improving repeatability and reducing manual errors
+  \fi
+  \ifTechArt
+    \item Developed automated asset tools with iterative feedback integration (Python/MaxScript)
+    \item Designed optimized asset development pipelines enhancing throughput and reliability
+    \item Maintained Jenkins-based validation for batch conversions and multi-platform builds
+  \fi
+\end{itemize}}
+
+% Hi-Rez Studios (Contract)
+\cventry{Nov 2024--Mar 2025}{Technical Animator (Contract)}{Hi-Rez Studios}{Alpharetta, GA}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \ifIT
+    \item Provided technical support for asset integration, build reliability, and pipeline troubleshooting
+    \item Built Python and MaxScript utilities to automate environment and setup processes
+    \item Partnered with engineering and content teams to resolve asset-related errors quickly
+  \fi
+  \ifTechArt
+    \item Ported and reworked characters for Smite 2 in Unreal Engine 5
+    \item Developed Python/MaxScript tools for automatic asset setup within UE5 pipelines
+    \item Collaborated across Animation, Design, QA to ensure milestone delivery
+  \fi
+\end{itemize}}
+
+% Hi-Rez Studios (FTE)
+\cventry{Aug 2023--Oct 2024}{Associate Rigging Artist}{Hi-Rez Studios}{Alpharetta, GA}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \ifIT
+    \item Troubleshot and resolved complex pipeline and compatibility issues across tools and platforms
+    \item Reduced processing time by \textbf{25\%} via custom scripting and workflow optimization
+    \item Coordinated with multiple teams to meet deadlines under fast-changing requirements
+  \fi
+  \ifTechArt
+    \item Ported characters/cosmetics from UE3 to UE5 for Smite 2 production
+    \item Authored MaxScript batch tools, reducing asset processing time by \textbf{25\%}
+    \item Rigged new playable characters and debugged complex rig/skin issues
+  \fi
+\end{itemize}}
+
+% Optional: Internship (TechArt emphasis)
+\ifTechArt
+\cventry{Aug 2022--May 2023}{Rigging Intern}{Hi-Rez Studios}{Alpharetta, GA}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \item Weight painted cosmetic assets to production standards under tight schedules
+  \item Built small optimization scripts for frequent rigging tasks
+\end{itemize}}
+\fi
+
+% ---------------------------
+% PROJECTS & ACHIEVEMENTS
+% ---------------------------
+\section{Technical Projects \& Achievements}
+
+% Process Automation / Error Reduction
+\cventry{}{Process Automation \& Error Reduction}{Hi-Rez Studios}{}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \item Automated conversion pipelines, reducing manual work by \textbf{60\%} and asset-related bugs by \textbf{40\%}
+  \ifIT
+    \item Documented runbooks and failure modes; improved reproducibility and handoffs
+  \fi
+\end{itemize}}
+
+% Tooling for User Support
+\cventry{}{GUI Tooling for Repeatable Processes}{Internal Development}{}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \item Designed GUI-driven tools that made complex workflows accessible to non-technical users
+  \item \textit{Impact:} Shortened onboarding time and reduced senior-staff dependency
+\end{itemize}}
+
+% CI/CD Implementation
+\cventry{}{CI/CD Implementation}{Anuttacon Contract}{}{}{
+\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
+  \item Configured Jenkins automation for validation and multi-platform builds; maintained a \textbf{99\% success rate}
+  \item \textit{Impact:} Reduced manual QA time by \textbf{40\%}; increased deployment reliability
+\end{itemize}}
+
+% ---------------------------
+% EDUCATION
+% ---------------------------
+\section{Education}
+\cventry{May 2023}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior Project: Automated Rigging System for Game Characters}
+
+
+\ifIT
+  \vfill
+  \begin{center}
+  \footnotesize \textit{Resume compiled with \LaTeX\ (toggle IT/TechArt at top); build with \texttt{latexmk -pdf}}
+  \end{center}
+\fi
+
+\end{document}
