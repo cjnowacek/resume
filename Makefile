@@ -1,7 +1,7 @@
 TEX := master_resume_cjnowacek.tex
 BASE := master_resume_cjnowacek
-IT_OUT := CJ-Nowacek_IT.pdf
-TA_OUT := CJ-Nowacek_TechArt.pdf
+IT_OUT := CJ-Nowacek-IT-Resume.pdf
+TA_OUT := CJ-Nowacek-TechArt-Resume.pdf
 
 LATEXMK := latexmk -pdf -interaction=nonstopmode -halt-on-error
 
