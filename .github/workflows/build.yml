@@ -1,0 +1,22 @@
+name: Build Resumes
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install LaTeX
+        run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra latexmk
+
+      - name: Build IT Resume
+        run: make it
+
+      - name: Build TechArt Resume
+        run: make techart
+
+      - name: Upload PDFs
+        uses: actions/upload-artifact@v3
+        with:
+          name: resumes
+          path: exports/*.pdf
