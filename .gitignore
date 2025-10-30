@@ -1,0 +1,43 @@
+# LaTeX temporary files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.bcf
+*.run.xml
+
+# Build artifacts
+*.pdf
+profile_toggle.tex
+
+# Output directory (optional - uncomment if you want to version control PDFs)
+# exports/*.pdf
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# Backup files
+*.backup
+*.bak
