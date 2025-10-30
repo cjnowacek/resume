@@ -116,7 +116,11 @@ grep -i error master_resume_cjnowacek.log
 
 ### PDFs Not Opening (open-it/open-techart targets)
 
-The Makefile uses `firefox` by default. Update `OPEN_CMD` variable:
+The Makefile auto-detects your OS. If it fails to open:
+
+- macOS: Uses `open` command
+- Linux: Uses `xdg-open` (install if missing: `sudo apt install xdg-utils`)
+- Windows: Uses `start` command
 
 ```makefile
 OPEN_CMD := evince      # Linux
