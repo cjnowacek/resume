@@ -3,11 +3,19 @@ on: [push, pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Install LaTeX
-        run: sudo apt-get update && sudo apt-get install -y texlive-latex-extra latexmk
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install LaTeX with FontAwesome
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            texlive-latex-extra \
+            texlive-fonts-recommended \
+            texlive-fonts-extra \
+            latexmk
 
       - name: Build IT Resume
         run: make it
@@ -20,3 +28,4 @@ jobs:
         with:
           name: resumes
           path: exports/*.pdf
+          retention-days: 90
