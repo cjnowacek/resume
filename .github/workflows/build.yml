@@ -56,7 +56,7 @@ jobs:
           chmod 600 ~/.ssh/website_key
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           export GIT_SSH_COMMAND="ssh -i ~/.ssh/website_key"
-          git clone --depth 1 git@github.com:cjnowacek/php-website.git website
+          git clone --depth 1 git@github.com:cjnowacek/website.git website
           cp exports/CJ-Nowacek-Pipeline-Resume.pdf exports/CJ-Nowacek-TechArt-Resume.pdf website/static/files/
           cd website
           if git diff --quiet; then
