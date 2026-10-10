@@ -60,10 +60,10 @@
 % ---------------------------
 \section{Professional Summary}
 \ifIT
-	\cvitem{}{Pipeline and infrastructure developer for an architectural visualization studio: Python automation, render-farm deployment, and Windows administration. Focused on reliable, unattended automation: silent software deployment, scheduled-task orchestration, test-backed tooling, and git-based release workflows, alongside Microsoft 365/Azure administration. Also adjunct faculty at the Cleveland Institute of Art. Background in technical art; shipped SMITE 2 at Hi-Rez Studios.}
+	\cvitem{}{Pipeline and infrastructure developer for an architectural visualization studio: Python automation, render-farm deployment, and Windows administration. Focused on reliable, unattended automation: silent software deployment, scheduled-task orchestration, and git-based release workflows, alongside Microsoft 365/Azure administration. Also adjunct faculty at the Cleveland Institute of Art. Background in technical art; shipped SMITE 2 at Hi-Rez Studios.}
 \fi
 \ifTechArt
-	\cvitem{}{Technical artist and pipeline developer who shipped \textbf{SMITE 2} at Hi-Rez Studios: character rigging plus the Python/MaxScript tooling behind the asset pipeline, with contract technical-art work in Unreal Engine 5. Now building production infrastructure for an architectural visualization studio (PyQt desktop tooling, render-farm automation, cross-DCC workflows) and teaching character rigging as adjunct faculty at the Cleveland Institute of Art, so tools stay grounded in how artists actually think and work. Uses AI-assisted, test-first development to build and iterate production tools faster.}
+	\cvitem{}{Technical artist and pipeline developer who shipped \textbf{SMITE 2} at Hi-Rez Studios: character rigging plus the Python/MaxScript tooling behind the asset pipeline, with contract technical-art work in Unreal Engine 5. Now building production infrastructure for an architectural visualization studio (PyQt desktop tooling, render-farm automation, cross-DCC workflows) and teaching character rigging as adjunct faculty at the Cleveland Institute of Art, so tools stay grounded in how artists actually think and work.}
 \fi
 
 % ---------------------------
@@ -80,7 +80,7 @@
 \ifTechArt
 	\cvitem{Programming}{Python (Maya API, PyMEL, PyQt/PySide, pymxs, pytest), MaxScript, MEL, Bash, Git, Perforce}
 	\cvitem{DCC/Engines}{3ds Max, Maya, Unreal Engine 5, Unity, Substance Painter}
-	\cvitem{Focus}{Character rigging, pipeline development, asset and scene optimization, render-farm automation, AI-assisted tool development}
+	\cvitem{Focus}{Character rigging, pipeline development, asset and scene optimization, render-farm automation}
 \fi
 
 % ---------------------------
@@ -94,7 +94,7 @@
 		\ifIT
 		\item Automated remote deployment of 3ds Max and production plugins across the studio's Windows render farm: silent, unattended installs with privilege-elevation handling
 		\item Leading the farm's migration to a modern render-management platform: built the silent install and update tooling for the new client and am porting deployment and submission workflows
-		\item Designed a Python scene-automation framework for scene preparation, diagnostics, and farm submission, accessible via CLI, PyQt desktop app, and native 3ds Max integration; ships as a packaged desktop app with an in-app update offer, crash logging, and startup tracing
+		\item Designed a Python scene-automation framework for scene preparation, diagnostics, and farm submission, accessible via CLI, PyQt desktop app, and native 3ds Max integration; ships as a packaged desktop app with an in-app update offer
 		\item Added a fast diagnostics tier that reads scene metadata straight from .max files without launching 3ds Max, with cached per-scene health reports
 		\item Brought the studio's legacy MaxScript toolset under version control with a repeatable build-and-release workflow, and maintain the git-based packaging that distributes tools to production
 		\item Develop test-first: an automated test suite gates every change, with AI coding agents working inside that review workflow; author documentation and train production staff on each tool
@@ -103,9 +103,7 @@
 		\item Designed and built a Python scene-automation framework for scene cleanup, optimization, diagnostics, and render-farm submission, accessible via CLI, PyQt desktop app, and native 3ds Max integration
 		\item Developed a MaxScript batch-rendering suite that classifies objects across XRef-linked scenes and automatically renders material/finish combinations, replacing a manual per-option workflow with one-click submission
 		\item Built artist-facing tools for the studio's central 3ds Max toolset (lighting, visualization, camera, CAD-import QA, and export utilities), modernized its legacy MaxScript, and own the build-and-release workflow that ships it to production
-		\item Extended the framework to run scene cleanup and legacy-renderer purges as batch jobs across linked scenes, locally or on the render farm, with automatic backups
-		\item Develop test-first with AI coding agents: automated checks precede every change and a gated review precedes every merge
-		\item Author documentation and train production staff on each tool at deployment and as it evolves
+		\item Develop test-first with AI coding agents (automated checks precede every change, a gated review precedes every merge), and train production staff on each tool with written documentation
 		      \fi
 	\end{itemize}}
 
@@ -116,7 +114,7 @@
 		\item Teach a character rigging course for BFA students and advise seniors on senior projects, portfolios, and demo reels
 		      \fi
 		      \ifTechArt
-		\item Teach a character rigging course for BFA students in Maya: joint placement and skinning, FK/IK control systems, animator-ready delivery, and an introduction to Python automation
+		\item Teach a character rigging course for BFA students in Maya, from joint placement and skinning through FK/IK controls and Python automation
 		\item Advise BFA seniors on senior projects, portfolios, and demo reels, and on preparing for technical-art and animation roles
 		      \fi
 	\end{itemize}}
@@ -125,7 +123,6 @@
 \cventry{2026}{MaxScript Specialist (Contract)}{MediaLab 3D Solutions}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
 		\item Built MaxScript and Python automation for asset processing and repetitive scene operations in 3ds Max; converted to full-time pipeline developer role
-		\item Partnered with the team to identify automation opportunities and deliver maintainable tools
 	\end{itemize}}
 
 % Yaggy Trucking (IT emphasis)
@@ -147,7 +144,7 @@
 % Hi-Rez Studios (Contract)
 \cventry{2024--2025}{Technical Animator (Contract)}{Hi-Rez Studios}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\item Built Python and MaxScript automation for asset integration and deployment in an Unreal Engine 5 environment, eliminating manual setup and reducing deployment errors
+		\item Built Python and MaxScript automation for asset integration and deployment in Unreal Engine 5, eliminating manual setup
 		\item Collaborated with Animation, Design, and QA to find bottlenecks and automate milestone-delivery steps
 	\end{itemize}}
 
@@ -180,8 +177,7 @@
 \ifTechArt
 	\cventry{2022--2023}{Technical Animator Intern}{Hi-Rez Studios}{Remote}{}{
 		\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-			\item Developed Python scripts to automate repetitive production tasks, improving efficiency and reducing manual errors
-			\item Identified workflow inefficiencies and built optimization tools for common bottlenecks
+			\item Developed Python scripts to automate repetitive production tasks and built optimization tools for common bottlenecks
 		\end{itemize}}
 \fi
 
