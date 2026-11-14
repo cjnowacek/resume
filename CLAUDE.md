@@ -16,6 +16,7 @@ CJ Nowacek's dual-profile LaTeX resume. One source file (`master_resume_cjnowace
 make it        # Build Pipeline/IT resume -> exports/CJ-Nowacek-Pipeline-Resume.pdf
 make techart   # Build TechArt resume  -> exports/CJ-Nowacek-TechArt-Resume.pdf
 make clean     # Remove temp files, keep PDFs
+make local     # Both resumes via podman, same LaTeX as CI (run `make local-image` once); a few seconds
 ```
 
 The Makefile writes `profile_toggle.tex` (gitignored) to flip the conditionals, then runs latexmk. No LaTeX is installed on CJ's Windows machine; the GitHub Actions workflow (`.github/workflows/build.yml`, "Build Resumes") builds both PDFs on every push and uploads them as the `resumes` artifact (90-day retention). Verify changes by pushing and checking the run.

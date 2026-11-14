@@ -28,7 +28,7 @@ else
     OPEN_CMD := start
 endif
 
-.PHONY: it techart cv refs philosophy syllabus clean realclean open-it open-techart open-cv help
+.PHONY: it techart cv refs philosophy syllabus clean realclean open-it open-techart open-cv help local local-image
 
 # Default target shows help
 help:
@@ -41,6 +41,7 @@ help:
 	@echo "  make syllabus    - Build sample rigging course syllabus"
 	@echo "  make open-it     - Build and open IT resume"
 	@echo "  make open-techart- Build and open TechArt resume"
+	@echo "  make local       - Build both resumes in the CI-matching container (podman; run make local-image once)"
 	@echo "  make clean       - Remove temp files (keep PDFs)"
 	@echo "  make realclean   - Remove all generated files"
 
@@ -118,3 +119,12 @@ realclean:
 	@latexmk -C
 	@rm -f profile_toggle.tex $(IT_OUT) $(TA_OUT) $(CV_OUT) $(REFS_OUT) $(PHIL_OUT) $(SYL_OUT)
 	@echo "✓ Removed all generated files"
+
+# Local builds with the same LaTeX as CI (see Containerfile). No host TeX needed.
+# TMPDIR: podman stages layers in /var/tmp by default, which a small root disk cannot hold.
+local-image:
+	@mkdir -p $(HOME)/.cache/podman-tmp
+	TMPDIR=$(HOME)/.cache/podman-tmp podman build -t resume-tex -f Containerfile .
+
+local:
+	podman run --rm -v "$(CURDIR)":/work resume-tex sh -c 'make it && make techart'
