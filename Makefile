@@ -2,6 +2,7 @@ TEX := master_resume_cjnowacek.tex
 BASE := master_resume_cjnowacek
 IT_OUT := exports/CJ-Nowacek-Pipeline-Resume.pdf
 TA_OUT := exports/CJ-Nowacek-TechArt-Resume.pdf
+TOOLS_OUT := exports/CJ-Nowacek-Senior-Tools-Engineer-Resume.pdf
 CV_TEX := cv_teaching_cjnowacek.tex
 CV_BASE := cv_teaching_cjnowacek
 CV_OUT := exports/CJ-Nowacek-Rigging-Instructor-CV.pdf
@@ -28,7 +29,7 @@ else
     OPEN_CMD := start
 endif
 
-.PHONY: it techart cv refs philosophy syllabus clean realclean open-it open-techart open-cv help local local-image
+.PHONY: it techart tools cv refs philosophy syllabus clean realclean open-it open-techart open-cv help local local-image
 
 # Default target shows help
 help:
@@ -63,6 +64,16 @@ techart:
 	@test -f $(BASE).pdf || { echo "❌ PDF not generated"; exit 1; }
 	@cp $(BASE).pdf $(TA_OUT)
 	@echo "✓ Successfully built $(TA_OUT)"
+	@latexmk -c
+
+tools:
+	@printf "\\ITfalse\n\\TechArttrue\n\\Toolstrue\n" > profile_toggle.tex
+	@echo "Building Senior Tools Engineer variant..."
+	@mkdir -p exports
+	@$(LATEXMK) $(TEX) || { echo "❌ LaTeX compilation failed"; exit 1; }
+	@test -f $(BASE).pdf || { echo "❌ PDF not generated"; exit 1; }
+	@cp $(BASE).pdf $(TOOLS_OUT)
+	@echo "✓ Successfully built $(TOOLS_OUT)"
 	@latexmk -c
 
 cv:
@@ -127,4 +138,4 @@ local-image:
 	TMPDIR=$(HOME)/.cache/podman-tmp podman build -t resume-tex -f Containerfile .
 
 local:
-	podman run --rm -v "$(CURDIR)":/work resume-tex sh -c 'make it && make techart'
+	podman run --rm -v "$(CURDIR)":/work resume-tex sh -c 'make it && make techart && make tools'

@@ -6,6 +6,9 @@
 % ---------------------------
 \newif\ifIT
 \newif\ifTechArt
+% Application variant of the TechArt profile (make tools): targeted title,
+% C++ in skills, no year on the degree. Off unless profile_toggle.tex sets it.
+\newif\ifTools
 % Choose ONE profile:
 \ITtrue        % <- IT/DevOps profile ON
 \TechArtfalse  % <- Tech Art profile OFF
@@ -20,13 +23,15 @@
 % ---------------------------
 % THEME & LAYOUT
 % ---------------------------
-\moderncvstyle{classic}
+% Color before style: since moderncv 2.4 the style copies the scheme's colors
+% when it loads, so a color set afterwards leaves everything black.
 \ifIT
   \moderncvcolor{orange}
 \fi
 \ifTechArt
   \moderncvcolor{blue}
 \fi
+\moderncvstyle{classic}
 
 \usepackage[utf8]{inputenc}
 \usepackage[scale=0.95]{geometry}
@@ -44,7 +49,11 @@
   \title{Pipeline Developer: Infrastructure \& Automation}
 \fi
 \ifTechArt
-  \title{Technical Artist \& Pipeline Developer}
+  \ifTools
+    \title{Senior Tools Engineer}
+  \else
+    \title{Technical Artist \& Pipeline Developer}
+  \fi
 \fi
 \address{Cleveland Heights, Ohio}{}{}
 \phone[mobile]{(216) 469 0959}
@@ -78,7 +87,7 @@
 \fi
 
 \ifTechArt
-	\cvitem{Programming}{Python (Maya API, PyMEL, PyQt/PySide, pymxs, pytest), MaxScript, MEL, Bash, Git, Perforce}
+	\cvitem{Programming}{Python (Maya API, PyMEL, PyQt/PySide, pymxs, pytest), MaxScript, MEL, \ifTools C++ (familiar), \fi Bash, Git, Perforce}
 	\cvitem{DCC/Engines}{3ds Max, Maya, Unreal Engine 5, Unity, Substance Painter}
 	\cvitem{Focus}{Character rigging, pipeline development, asset and scene optimization, render-farm automation}
 \fi
@@ -196,7 +205,7 @@
 % EDUCATION
 % ---------------------------
 \section{Education}
-\cventry{2023}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior project: \textit{Runaway}, a solo narrative game in Unreal Engine: rigging, cinematic cameras, automated build pipeline}
+\cventry{\ifTools\else 2023\fi}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior project: \textit{Runaway}, a solo narrative game in Unreal Engine: rigging, cinematic cameras, automated build pipeline}
 
 
 \end{document}
