@@ -60,10 +60,10 @@
 % ---------------------------
 \section{Professional Summary}
 \ifIT
-	\cvitem{}{Pipeline and infrastructure developer for an architectural visualization studio: Python automation, render-farm deployment, and Windows administration. Focused on reliable, unattended automation: silent software deployment, scheduled-task orchestration, and git-based release workflows, alongside Microsoft 365/Azure administration. Also adjunct faculty at the Cleveland Institute of Art. Background in technical art; shipped SMITE 2 at Hi-Rez Studios.}
+	\cvitem{}{Pipeline and infrastructure developer for an architectural visualization studio: Python automation, render-farm deployment, and Windows administration. Focused on unattended automation: silent software deployment, scheduled tasks, and git-based release workflows. Background in technical art; shipped SMITE 2 at Hi-Rez Studios.}
 \fi
 \ifTechArt
-	\cvitem{}{Technical artist and pipeline developer who shipped \textbf{SMITE 2} at Hi-Rez Studios: character rigging plus the Python/MaxScript tooling behind the asset pipeline, with contract technical-art work in Unreal Engine 5. Now building production infrastructure for an architectural visualization studio (PyQt desktop tooling, render-farm automation, cross-DCC workflows) and co-teaching 3D rigging as adjunct faculty at the Cleveland Institute of Art, so tools stay grounded in how artists actually think and work.}
+	\cvitem{}{Technical artist and pipeline developer. Shipped \textbf{SMITE 2} at Hi-Rez Studios: character rigging plus the Python/MaxScript tooling behind the asset pipeline. Now building production infrastructure for an architectural visualization studio: PyQt desktop tooling, render-farm automation, cross-DCC workflows. Also co-teach 3D rigging at the Cleveland Institute of Art, which keeps the tools grounded in how artists actually work.}
 \fi
 
 % ---------------------------
@@ -74,7 +74,7 @@
 	\cvitem{Infrastructure}{Windows \& Linux administration; Microsoft 365 \& Azure; user/device management; remote access}
 	\cvitem{Automation}{Python, Bash, PowerShell; silent software deployment; scheduled-task orchestration; batch processing}
 	\cvitem{Render Farm}{Deployment and submission automation for 3ds Max render farms}
-	\cvitem{Tools}{Git, Perforce, Jira, Confluence, PyQt, pytest, PyInstaller}
+	\cvitem{Tools}{Git, GitHub Actions, Perforce, Jira, Confluence, PyQt, pytest, PyInstaller}
 \fi
 
 \ifTechArt
@@ -94,8 +94,8 @@
 		\ifIT
 		\item Automated remote deployment of 3ds Max and production plugins across the studio's Windows render farm: silent, unattended installs with privilege-elevation handling
 		\item Leading the farm's migration to a modern render-management platform: built the silent install and update tooling for the new client and am porting deployment and submission workflows
-		\item Designed a Python scene-automation framework for scene preparation, diagnostics, and farm submission, accessible via CLI, PyQt desktop app, and native 3ds Max integration; ships as a packaged desktop app with an in-app update offer
-		\item Added a fast diagnostics tier that reads scene metadata from .max files without launching 3ds Max, with cached health reports
+		\item Designed a Python scene-automation framework for scene preparation, diagnostics, and farm submission, accessible via CLI, PyQt desktop app, and native 3ds Max integration; ships as a packaged desktop app with in-app updates
+		\item Added a fast diagnostics tier that reads .max scene metadata without launching 3ds Max and caches health reports
 		\item Brought the studio's legacy MaxScript toolset under version control with a repeatable build-and-release workflow, and maintain the git-based packaging that distributes tools to production
 		\item Built an AI-assisted development workflow with regression tests and independent review before release
 		\item Author documentation and train production staff on each tool
@@ -124,7 +124,7 @@
 % MediaLab 3D Solutions (Contract, converted to FTE)
 \cventry{2026}{MaxScript Specialist (Contract)}{MediaLab 3D Solutions}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\item Built MaxScript and Python automation for asset processing and repetitive scene operations in 3ds Max; converted to full-time pipeline developer role
+		\item Built MaxScript and Python automation for asset processing and scene operations in 3ds Max; converted to full-time
 	\end{itemize}}
 
 % Yaggy Trucking (IT emphasis)
@@ -139,8 +139,8 @@
 % Anuttacon via GoDemic (Contract)
 \cventry{2025}{Technical Artist (Contract)}{Anuttacon via GoDemic}{Remote}{}{
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
-		\item Developed automated asset-processing tools in Python and MEL, iterating on feedback to improve usability and reliability
-		\item Wrote user documentation and incorporated stakeholder feedback to meet production needs
+		\item Built CLI rigging automation in Python and MEL for \textit{Whispers from the Star}, generating Maya character rigs unattended
+		\item Automated animation export through the studio's CI pipeline, with batch asset-processing tools and user documentation
 	\end{itemize}}
 
 % Hi-Rez Studios (Contract)
@@ -163,7 +163,7 @@
 	\begin{itemize}[leftmargin=0.6cm, itemsep=0pt]
 		\item Shipped \textbf{SMITE 2} as part of the technical animation team: character rigging alongside the Python/MaxScript tooling that supported the asset pipeline
 		\ifIT
-		\item Developed automated batch-processing tools in Python and MaxScript, cutting manual asset-processing time by \textbf{25\%} and improving pipeline reliability
+		\item Developed automated batch-processing tools in Python and MaxScript, cutting manual asset-processing time by \textbf{25\%}
 		\item Built automated asset-migration pipelines across engine versions, reducing integration errors
 		\item Wrote documentation and runbooks for automated processes to support team scaling and knowledge transfer
 		      \fi
@@ -184,15 +184,19 @@
 \fi
 
 % ---------------------------
+% PROJECTS (IT emphasis)
+% ---------------------------
+\ifIT
+	\section{Projects}
+	\cvitem{CI/CD}{Portfolio site (Astro) built and deployed by GitHub Actions over SSH; a second pipeline builds this resume from LaTeX and publishes it to the site: \httplink{github.com/cjnowacek/website}, \httplink{github.com/cjnowacek/resume}}
+	\cvitem{Linux server}{Ubuntu VPS provisioned by idempotent Bash scripts: Caddy with TLS, systemd services and timers, firewall and SSH hardening; hosts a Go WebSocket relay and a self-built C++ notes server}
+\fi
+
+% ---------------------------
 % EDUCATION
 % ---------------------------
 \section{Education}
-\cventry{2023}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior Project: Cinematic story driven game}
+\cventry{2023}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior project: \textit{Runaway}, a solo narrative game in Unreal Engine: rigging, cinematic cameras, automated build pipeline}
 
-
-\vfill
-\begin{center}
-	\footnotesize \textit{Updated \today}
-\end{center}
 
 \end{document}
