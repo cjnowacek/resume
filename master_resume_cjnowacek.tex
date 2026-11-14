@@ -6,9 +6,12 @@
 % ---------------------------
 \newif\ifIT
 \newif\ifTechArt
-% Application variant of the TechArt profile (make tools): targeted title,
-% C++ in skills, no year on the degree. Off unless profile_toggle.tex sets it.
-\newif\ifTools
+% Application copy of either profile (make apply TITLE="..."): the title is the
+% job applied for, optional extra skills, no year on the degree. Never synced to
+% the site. Off unless profile_toggle.tex sets it.
+\newif\ifApply
+\newcommand{\ApplyTitle}{}
+\newcommand{\ApplyExtraSkills}{}  % "Skill, " with the trailing comma, or empty
 % Choose ONE profile:
 \ITtrue        % <- IT/DevOps profile ON
 \TechArtfalse  % <- Tech Art profile OFF
@@ -45,13 +48,13 @@
 % PERSONAL INFO
 % ---------------------------
 \name{CJ}{Nowacek}
-\ifIT
-  \title{Pipeline Developer: Infrastructure \& Automation}
-\fi
-\ifTechArt
-  \ifTools
-    \title{Senior Tools Engineer}
-  \else
+\ifApply
+  \title{\ApplyTitle}
+\else
+  \ifIT
+    \title{Pipeline Developer: Infrastructure \& Automation}
+  \fi
+  \ifTechArt
     \title{Technical Artist \& Pipeline Developer}
   \fi
 \fi
@@ -83,11 +86,11 @@
 	\cvitem{Infrastructure}{Windows \& Linux administration; Microsoft 365 \& Azure; user/device management; remote access}
 	\cvitem{Automation}{Python, Bash, PowerShell; silent software deployment; scheduled-task orchestration; batch processing}
 	\cvitem{Render Farm}{Deployment and submission automation for 3ds Max render farms}
-	\cvitem{Tools}{Git, GitHub Actions, Perforce, Jira, Confluence, PyQt, pytest, PyInstaller}
+	\cvitem{Tools}{\ApplyExtraSkills Git, GitHub Actions, Perforce, Jira, Confluence, PyQt, pytest, PyInstaller}
 \fi
 
 \ifTechArt
-	\cvitem{Programming}{Python (Maya API, PyMEL, PyQt/PySide, pymxs, pytest), MaxScript, MEL, \ifTools C++ (familiar), \fi Bash, Git, Perforce}
+	\cvitem{Programming}{Python (Maya API, PyMEL, PyQt/PySide, pymxs, pytest), MaxScript, MEL, \ApplyExtraSkills Bash, Git, Perforce}
 	\cvitem{DCC/Engines}{3ds Max, Maya, Unreal Engine 5, Unity, Substance Painter}
 	\cvitem{Focus}{Character rigging, pipeline development, asset and scene optimization, render-farm automation}
 \fi
@@ -205,7 +208,7 @@
 % EDUCATION
 % ---------------------------
 \section{Education}
-\cventry{\ifTools\else 2023\fi}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior project: \textit{Runaway}, a solo narrative game in Unreal Engine: rigging, cinematic cameras, automated build pipeline}
+\cventry{\ifApply\else 2023\fi}{BFA, Animation and Game Design}{Cleveland Institute of Art}{Cleveland, OH}{}{Senior project: \textit{Runaway}, a solo narrative game in Unreal Engine: rigging, cinematic cameras, automated build pipeline}
 
 
 \end{document}

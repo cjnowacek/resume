@@ -16,6 +16,7 @@ CJ Nowacek's dual-profile LaTeX resume. One source file (`master_resume_cjnowace
 make it        # Build Pipeline/IT resume -> exports/CJ-Nowacek-Pipeline-Resume.pdf
 make techart   # Build TechArt resume  -> exports/CJ-Nowacek-TechArt-Resume.pdf
 make clean     # Remove temp files, keep PDFs
+make local-apply TITLE="Senior Tools Engineer" EXTRA_SKILLS="C++ (familiar)"   # application copy: that title, optional extra skill, no degree year; PROFILE=it for the Pipeline base; never synced to the site
 make local     # Both resumes via podman, same LaTeX as CI (run `make local-image` once); a few seconds
 ```
 
